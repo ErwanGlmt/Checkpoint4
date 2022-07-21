@@ -5,6 +5,7 @@ import Play from "./pages/Play";
 import Categories from "./pages/Categories";
 import AddRules from "./pages/AddRules";
 import Contact from "./pages/Contact";
+import InGame from "./components/InGame";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Categories" element={<Categories />} />
         <Route path="/AddRules" element={<AddRules />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/InGame" element={<InGame />} />
       </Routes>
     </div>
   );

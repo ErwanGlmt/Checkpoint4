@@ -13,26 +13,24 @@ CREATE TABLE questions (
     category VARCHAR (255) NOT NULL
 ); 
 
-DROP TABLE IF EXISTS themes;
-
-CREATE TABLE themes(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    theme VARCHAR(500) NOT NULL
-); 
-
 INSERT INTO questions (question, category) VALUES
 ("Ne pas se laver pendant une semaine", "Multi"),
 ("Donne le nom de 3 personnages de", "Citation"),
-("Combien y a t'il d'habitants en Thaïlande ?", "Questions"),
-("Cite 3 capitales d'Amérique du Sud", "Questions"),
-("Vous devez tous vous vouvoyez, manants!", "Evènements"),
+("Combien y a t'il d'habitants en Thaïlande ? (à 5 millions près)", "Question"),
+("Cite 3 capitales d'Amérique du Sud", "Citation"),
+("Vous devez tous vous vouvoyez, manants!", "Event"),
 ("Tu dois faire 10 pompes", "Action"),
+("Dans Harry Potter, cite 3 sorcier de Gryffondor", "Citation"),
+("Dans Harry Potter, cite 3 sorcier de Serpentard", "Citation"),
+("Dans Harry Potter, cite 3 sorcier de Serdaigle", "Citation"),
+("Dans Harry Potter, cite 3 sorcier de Pouffsouffle", "Citation"),
+("Cite 3 antoganistes d'Harry Potter", "Citation"),
+("Cite 3 antoganistes de Star Wars", "Citation"),
+("Cite 3 héros de Star Wars", "Citation"),
+("Cite 3 héros de Marvel", "Citation"),
+("Cite 3 antagonistes de Marvel", "Citation"),
+("Cite 3 antagonistes de DC Comics", "Citation"),
+("Cite 3 héros de DC Comics", "Citation"),
+("Cite 3 personnages de League of Legends", "Citation"),
+("Cite 3 personnages de Naruto", "Citation"),
 ("Quelle est ta plus grande phobie", "Vérité");
-
-INSERT INTO themes (theme) VALUES
-("Harry Potter"),
-("Star Wars"),
-("Marvel"),
-("DC Comics"),
-("League of Legends"),
-("Naruto");
