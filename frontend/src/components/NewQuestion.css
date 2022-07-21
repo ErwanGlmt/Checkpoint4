@@ -1,0 +1,75 @@
+.newcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.gif {
+  height: 200px;
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.newquestioncontainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin: 50px;
+}
+
+.intoquestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.randomplayer {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  height: 60px;
+  width: auto;
+  border-radius: 25px;
+  font-size: 20px;
+  margin: 10px;
+}
+.intoquestion h3 {
+  background-color: white;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100px;
+  width: auto;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.intoquestion h4 {
+  font-size: 18px;
+  padding: 25px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background: linear-gradient(to right, #ff512f, #f09819);
+}
+
+.newquestioncontainer h5 {
+  font-size: 14px;
+}
+
+.voidtag {
+  height: 80px;
+}
+.voidtagevent {
+  height: 145px;
+}
+
+.quizzvoid {
+  height: 3px;
+}

@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import RandomContext from "../contexts/RandomContext";
 import RoundsContext from "../contexts/RoundsContext";
+import PlayersContext from "../contexts/PlayersContext";
+import alcoolgif from "../assets/alcoolgif.gif";
+import "./NewQuestion.css";
 
 export default function NewQuestion() {
   const { getId } = useContext(RandomContext);
+  const { players } = useContext(PlayersContext);
   const { rounds } = useContext(RoundsContext);
   const [questions, setQuestions] = useState([]);
 
@@ -13,73 +17,90 @@ export default function NewQuestion() {
       .then((data) => setQuestions(data));
   }, []);
 
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  const getRandomPlayer = getRandomInt(players.length);
+
   return (
-    <div>
+    <div className="newcontainer">
       {rounds === 0 ? (
-        <div>
-          <p>C'est parti !</p>
+        <div className="beginstage">
+          <img src={alcoolgif} className="gif" alt="begingame" />
         </div>
       ) : (
-        <div>
-          <p>{getId}</p>
+        <div className="newquestioncontainer">
+          <h5>{rounds}/30</h5>
           {questions[getId].category === "Citation" ? (
-            <div>
-              <p>Culture Test !</p>
+            <div className="intoquestion">
+              <h4 id="culture">Culture Test !</h4>
+              <h2 className="randomplayer">{players[getRandomPlayer]}</h2>
+              <h3 className="singlequestion">{questions[getId].question}</h3>
               <p>Bois une gorgée par mauvaise réponse, sinon donne les !</p>
             </div>
           ) : (
             ""
           )}
           {questions[getId].category === "Question" ? (
-            <div>
-              <p>Question pour un champion !</p>
+            <div className="intoquestion">
+              <h4 id="champion">Quizz !</h4>
+              <h2 className="randomplayer">{players[getRandomPlayer]}</h2>
+              <h3 className="singlequestion">{questions[getId].question}</h3>
               <p>5 gorgées en jeu !</p>
+              <div className="quizzvoid" />
             </div>
           ) : (
             ""
           )}
-          {questions[getId].category === "Multi" && rounds % 2 === 0 ? (
-            <div>
-              <p>Qui pourrait ?</p>
+          {questions[getId].category === "Qui" ? (
+            <div className="intoquestion">
+              <h4 id="qui">Qui pourrait ?</h4>
+              <div className="voidtag" />
+              <h3 className="singlequestion">{questions[getId].question}</h3>
               <p>La personne élue boira 3 gorgées !</p>
             </div>
           ) : (
             ""
           )}
-          {questions[getId].category === "Multi" && rounds % 2 !== 0 ? (
-            <div>
-              <p>Je n'ai jamais ...</p>
-              <p>Ceux qui n'ont jamais boivent 3 gorgées</p>
+          {questions[getId].category === "Jamais" ? (
+            <div className="intoquestion">
+              <h4 id="never">Je n'ai jamais ...</h4>
+              <div className="voidtag" />
+              <h3 className="singlequestion">{questions[getId].question}</h3>
+              <p>Ceux qui ne l'on jamais fait boivent 3 gorgées</p>
             </div>
           ) : (
             ""
           )}
           {questions[getId].category === "Event" ? (
-            <div>
-              <p>Comment ça ? L'alcool c'est pas cool ?</p>
-              <p>y'as le mot cool dans alcool</p>
+            <div className="intoquestion">
+              <h4 id="event">Comment ça ? L'alcool c'est pas cool ?</h4>
+              <div className="voidtagevent" />
+              <h3 className="singlequestion">{questions[getId].question}</h3>
             </div>
           ) : (
             ""
           )}
           {questions[getId].category === "Vérité" ? (
-            <div>
-              <p>Vérité</p>
+            <div className="intoquestion">
+              <h4 id="truth">Vérité</h4>
+              <h2 className="randomplayer">{players[getRandomPlayer]}</h2>
+              <h3 className="singlequestion">{questions[getId].question}</h3>
               <p>Réponds et tout le monde prend une gorgée !</p>
             </div>
           ) : (
             ""
           )}
           {questions[getId].category === "Action" ? (
-            <div>
-              <p>Action</p>
+            <div className="intoquestion">
+              <h4 id="action">Action</h4>
+              <h2 className="randomplayer">{players[getRandomPlayer]}</h2>
+              <h3 className="singlequestion">{questions[getId].question}</h3>
               <p>Distribue 3 gorgées en cas de réussite !</p>
             </div>
           ) : (
             ""
           )}
-          <p>{rounds}</p>
-          <p>{questions[getId].question}</p>
         </div>
       )}
     </div>

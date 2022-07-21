@@ -7,9 +7,105 @@
 }
 
 .playcontainer {
+  height: 720px;
+  background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+}
+
+.readycontainer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
-  gap: 50px;
+}
+.readycontainer h1 {
+  font-size: 30px;
+}
+.playhead {
+  font-family: "Galindo", cursive;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+.namemanager {
+  height: 250px;
+  width: 300px;
+  background-color: white;
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.playersection {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  gap: 15px;
+}
+
+.playername {
+  font-family: "Galindo", cursive;
+  background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.buttonplay {
+  margin: 20px;
+  height: 70px;
+  width: 100px;
+  border-radius: 25px;
+  margin-top: 50px;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  color: white;
+  font-family: "Galindo", cursive;
+  border: none;
+}
+.buttonreturn {
+  position: relative;
+  bottom: 590px;
+  right: 110px;
+  color: white;
+  font-family: "Galindo", cursive;
+  font-size: 50px;
+  background-color: none;
+  border: none;
+  background: none;
+}
+
+.readycontainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addplayers {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonaddplayer {
+  margin: 5px;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  color: white;
+  font-family: "Galindo", cursive;
+  border: none;
+}
+
+.inputplayer {
+  font-family: "Galindo", cursive;
+  color: #ff512f;
+  border: none;
+  border-radius: 25px;
+  height: 30px;
+  text-align: center;
+  width: 200px;
+}
+
+.inputplayer::placeholder {
+  color: #ff512f;
+  opacity: 50%;
 }

@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import RoundsContext from "../contexts/RoundsContext";
 import RandomContext from "../contexts/RandomContext";
 import NewQuestion from "./NewQuestion";
+import "./RoundGames.css";
 
 export default function RoundGames() {
-  const { rounds, setRounds } = useContext(RoundsContext);
+  const { setRounds } = useContext(RoundsContext);
   const [questions, setQuestions] = useState([]);
   const [getId, setGetId] = useState(0);
 
@@ -28,11 +29,9 @@ export default function RoundGames() {
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     <RandomContext.Provider value={{ getId }}>
-      <div>
-        <p>{rounds}/100</p>
-        <p>{randomId}</p>
+      <div className="roundcontainer">
         <NewQuestion />
-        <button className="buttonnext" type="button" onClick={handleRounds}>
+        <button className="buttonround" type="button" onClick={handleRounds}>
           Next
         </button>
       </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import EndGame from "./EndGame";
 import RoundGames from "./RoundGames";
 import RoundsContext from "../contexts/RoundsContext";
+import "./InGame.css";
 
 export default function InGame() {
   const [rounds, setRounds] = useState(0);
@@ -10,20 +11,20 @@ export default function InGame() {
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     <RoundsContext.Provider value={{ rounds, setRounds }}>
-      <div>
-        {rounds >= 100 ? (
+      <div className="ingamecontainer">
+        {rounds > 30 ? (
           <div>
             <EndGame />
           </div>
         ) : (
-          <div>
+          <div className="ingamesecond">
             <div>
-              <h1>InGame</h1>
+              {rounds === 0 ? <h1>Let's go !</h1> : ""}
               <RoundGames />
             </div>
             <Link to="/">
-              <button className="buttonreturn" type="button">
-                Retour
+              <button className="buttoningame" type="button">
+                Fin de partie
               </button>
             </Link>
           </div>

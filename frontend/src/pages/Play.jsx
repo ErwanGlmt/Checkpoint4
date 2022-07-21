@@ -23,27 +23,34 @@ export default function Play() {
 
   return (
     <PlayersContext.Provider value={{ players, setPlayers }}>
-      <div>
-        {ready ? (
+      <div className="playcontainer">
+        {ready || players.length > 7 ? (
           <div>
             <InGame />
           </div>
         ) : (
-          <div className="playcontainer">
-            <div>
+          <div className="readycontainer">
+            <div className="playhead">
               <h1>Jouer une partie</h1>
+              <p>De 2 à 8 joueurs</p>
             </div>
-            {players.map((player) => (
-              <li className="playername">{player}</li>
-            ))}
+            <div className="namemanager">
+              <div className="playersection">
+                {players.map((player) => (
+                  <li className="playername">{player}</li>
+                ))}
+              </div>
+            </div>
             <form onSubmit={handlePlayers} className="addplayers">
               <input
+                className="inputplayer"
                 type="text"
+                placeholder="Nom du joueur"
                 value={playersInput}
                 onChange={(event) => setPlayersInput(event.target.value)}
                 required
               />
-              <button className="buttonaddplayer" type="button">
+              <button className="buttonaddplayer" type="submit">
                 Ajouter un joueur
               </button>
             </form>
@@ -52,11 +59,11 @@ export default function Play() {
               <div>
                 <Link to="/">
                   <button
-                    className="buttonplay"
+                    className="buttonreturn"
                     type="button"
                     onChange={handlePlayers}
                   >
-                    Retour
+                    ⬅
                   </button>
                 </Link>
               </div>
@@ -69,7 +76,7 @@ export default function Play() {
                       type="button"
                       onClick={handleReady}
                     >
-                      Jouer
+                      Valider
                     </button>
                   </div>
                 ) : (
@@ -80,8 +87,8 @@ export default function Play() {
                   </div>
                 )}
                 <Link to="/">
-                  <button className="buttonplay" type="button">
-                    Retour
+                  <button className="buttonreturn" type="submit">
+                    ⬅
                   </button>
                 </Link>
               </div>

@@ -1,0 +1,54 @@
+.logo {
+  height: 250px;
+  width: auto;
+}
+
+.homecontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.buttonlist {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.buttonhomeplay {
+  font-family: "Galindo", cursive;
+  color: white;
+  font-size: 20px;
+  height: 100px;
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 20px;
+  background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+}
+.buttonhomecat {
+  font-family: "Galindo", cursive;
+  color: white;
+  font-size: 20px;
+  height: 100px;
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff512f, #f09819);
+}
+.buttonhomerule {
+  font-family: "Galindo", cursive;
+  color: white;
+  font-size: 20px;
+  height: 100px;
+  width: 300px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+}

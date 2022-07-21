@@ -1,0 +1,29 @@
+.ingamecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingamesecond {
+  display: flex;
+  font-family: "Galindo", cursive;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.ingamesecond h1 {
+  margin: 50px;
+}
+
+.buttoningame {
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  color: white;
+  border: none;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  font-family: "Galindo", cursive;
+}

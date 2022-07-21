@@ -1,0 +1,17 @@
+.buttonround {
+  height: 50px;
+  font-family: "Galindo", cursive;
+  width: 100px;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  border: none;
+  margin: 40px;
+}
+
+.roundcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
