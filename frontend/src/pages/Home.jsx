@@ -12,17 +12,17 @@ export default function Home() {
       <div className="buttonlist">
         <Link to="/Play">
           <button className="buttonhomeplay" type="button">
-            Play
+            Jouer
           </button>
         </Link>
         <Link to="/Categories">
           <button className="buttonhomecat" type="button">
-            Categories
+            Catégories
           </button>
         </Link>
         <Link to="/AddRules">
           <button className="buttonhomerule" type="button">
-            Add a Rule
+            Ajouter une règle
           </button>
         </Link>
       </div>

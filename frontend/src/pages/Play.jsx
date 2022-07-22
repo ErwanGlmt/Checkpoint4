@@ -31,7 +31,7 @@ export default function Play() {
         ) : (
           <div className="readycontainer">
             <div className="playhead">
-              <h1>Jouer une partie</h1>
+              <h1>Lancer une partie</h1>
               <p>De 2 à 8 joueurs</p>
             </div>
             <div className="namemanager">
@@ -87,7 +87,7 @@ export default function Play() {
                   </div>
                 )}
                 <Link to="/">
-                  <button className="buttonreturn" type="submit">
+                  <button className="buttonreturn" type="button">
                     ⬅
                   </button>
                 </Link>

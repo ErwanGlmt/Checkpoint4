@@ -1,0 +1,47 @@
+.categoryhead {
+  font-size: 16px;
+  color: white;
+  font-family: "Galindo", cursive;
+}
+.categoryhead h1 {
+  margin: 40px;
+}
+
+.categoryselect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  gap: 20px;
+}
+
+.singlecat {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  font-family: "Galindo", cursive;
+  height: 100px;
+  border-radius: 25px;
+  width: 250px;
+  color: white;
+  padding: 10px;
+  background: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+  width: 200px;
+  justify-content: center;
+}
+
+.singlecat h2 {
+  width: 200px;
+}
+
+.catbutton {
+  border: none;
+  height: 100px;
+  font-size: 12px;
+  font-family: "Galindo", cursive;
+  color: white;
+  width: auto;
+  height: auto;
+  background: none;
+}
