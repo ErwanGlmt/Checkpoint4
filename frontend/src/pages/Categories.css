@@ -1,0 +1,19 @@
+.categoriescontainer {
+  height: 750px;
+  background: linear-gradient(to right, #ff512f, #f09819);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.returnbutton {
+  position: relative;
+  bottom: 565px;
+  right: 150px;
+  color: white;
+  font-family: "Galindo", cursive;
+  font-size: 50px;
+  background-color: none;
+  border: none;
+  background: none;
+}

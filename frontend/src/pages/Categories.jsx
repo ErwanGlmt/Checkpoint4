@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CategoryGame from "../components/CategoryGame";
+import "./Categories.css";
 
 export default function Categories() {
   return (
-    <>
+    <div className="categoriescontainer">
+      <CategoryGame />
       <div>
-        <h1>Choose a category</h1>
+        <Link to="/">
+          <button className="returnbutton" type="button">
+            ⬅
+          </button>
+        </Link>
       </div>
-      <Link to="/">
-        <button className="buttonreturn" type="button">
-          Return
-        </button>
-      </Link>
-    </>
+    </div>
   );
 }
